@@ -54,7 +54,7 @@ func main() {
 		atomic.AddInt64(&inputCount, 1)
 	})
 
-	const NumOut = 15 // количество обрабатывающих горутин и каналов
+	const NumOut = 5 // количество обрабатывающих горутин и каналов
 	// outs — слайс каналов, куда будут записываться числа из chIn
 	outs := make([]chan int64, NumOut)
 	for i := 0; i < NumOut; i++ {
